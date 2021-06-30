@@ -1,8 +1,21 @@
-node {
+pipeline {
+    agent any
 
-     stage('code compli') {
-
-       sh 'mvn compile'
-       }
-
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
+}

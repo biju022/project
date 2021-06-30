@@ -2,7 +2,7 @@ FROM tomcat:latest
 
 LABEL maintainer="Biju Behera"
 
-ADD . /usr/local/tomcat/webapps/
+COPY target/*.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 

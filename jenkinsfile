@@ -1,0 +1,8 @@
+node {
+
+     stage('code compli') {
+
+       sh 'mvn compile'
+       }
+
+    }
